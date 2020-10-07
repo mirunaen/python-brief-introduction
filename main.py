@@ -185,6 +185,18 @@ if __name__ == "__main__":
 It executes the main() function only if this file is executed as the main program.
 """
 
+###Modules
+#import the math module,which contains features for working with math
+import math 
+
+# the math module contains lots of pre-built functions
+print("The square rute of 16 is",math.sqrt(16))
+# in addition to function,some modules contain useful constants 
+print("Pi is:", math.pi)
+#some more math functions
+print("The log of 1822 of base 10 is:",math.log(1822,10))
+print(math.isnan(12))
+print("The reminder of 20000 and 18 is:",math.remainder(20000,18))
 
 from datetime import date
 from datetime import time
@@ -238,3 +250,4 @@ print(now.strftime("Locate time: %X"))
 
 print(now.strftime("Current time: %I:%M:%S %p"))
 print(now.strftime("24 hour time: %H:%M "))
+
