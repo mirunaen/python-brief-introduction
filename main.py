@@ -184,3 +184,57 @@ if __name__ == "__main__":
   main()
 It executes the main() function only if this file is executed as the main program.
 """
+
+
+from datetime import date
+from datetime import time
+from datetime import datetime
+
+#im going to import date time and datetime Classes
+
+today = date.today()
+
+#Get today´s date from the simple today() method from the date class
+print("Today´s date is ",today)
+
+#Print out the date´s individual components 
+
+print("Date comoponents: ",today.day,today.month,today.year)
+
+#retrieve today´s weekday (0=Monday, 6=Sunday)
+
+print("Today´s weekday # is:",today.weekday())
+days=["Mon","tue","wed","thuer","fri","sat","sund"]
+print("Which is a : ", days[today.weekday()])
+
+##DATETIME OBJECTS  
+#Get today´s date from the datetime class
+
+today = datetime.now()
+print("The current date is", today)
+t= datetime.time(datetime.now())
+print("The hour is ",t)
+
+#FORMATTING TIME OUTPUT
+
+#Example file for formatting time and date output
+
+#Times and dates can be formatted using a set of predefined string control codes
+now=datetime.now()
+### Date formatting ###
+# %y/%Y - Year,%a/$A -weekday, %b/%B - month, %d- day of the month
+print(now.strftime("The current year is: %Y"))
+print(now.strftime("%a,%d,%B,%y"))
+
+
+# %c -locate´s date and time,%x - locate´s date,%X - locale´s time
+
+print(now.strftime("Locate date and time: %c"))
+print(now.strftime("Locate date: %x"))
+print(now.strftime("Locate time: %X"))
+
+### Time Formatting  ###
+#%I/%H -12/24hour, %M -minute, %S - second, %p - locale´s AM/PM
+
+print(now.strftime("Current time: %I:%M:%S %p"))
+print(now.strftime("24 hour time: %H:%M "))
